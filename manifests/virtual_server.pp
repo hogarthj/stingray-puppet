@@ -167,6 +167,7 @@ define stingray::virtual_server(
   $aptimizer_express   = 'no',
   $rc_save_all         = undef,
   $error_file          = undef
+  $ssl_sites           = undef,
 ) {
   include stingray
 

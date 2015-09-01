@@ -22,6 +22,10 @@ ssl_ocsp!issuer!_DEFAULT_!responder_cert
 ssl_ocsp!issuer!_DEFAULT_!signer
 ssl_ocsp!issuer!_DEFAULT_!url
 <% end -%>
+<% if @ssl_sites -%>
+<% @ssl_sites.each do |ssl_site| -%>
+<%= ssl_site %>
+<% end -%>
 <% if @response_rules then-%>
 responserules <%= @response_rules.class == Array ? "\"" + (@response_rules * "\" \"") + "\"" : "\"" + @response_rules  + "\""%>
 <% end -%>
