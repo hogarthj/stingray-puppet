@@ -26,6 +26,7 @@ ssl_ocsp!issuer!_DEFAULT_!url
 <% @ssl_sites.each do |ssl_site| -%>
 <%= ssl_site %>
 <% end -%>
+<% end -%>
 <% if @response_rules then-%>
 responserules <%= @response_rules.class == Array ? "\"" + (@response_rules * "\" \"") + "\"" : "\"" + @response_rules  + "\""%>
 <% end -%>
