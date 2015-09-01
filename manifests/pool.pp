@@ -102,17 +102,22 @@
 #
 define stingray::pool(
     $nodes,
-    $weightings   = undef,
-    $monitors     = 'Ping',
-    $disabled     = '',
-    $draining     = '',
-    $algorithm    = 'Round Robin',
-    $persistence  = undef,
-    $bandwidth    = undef,
-    $failure_pool = undef,
-    $maxconns     = undef,
-    $ssl_encrypt  = undef,
-    $priority     = undef
+    $weightings       = undef,
+    $monitors         = 'Ping',
+    $disabled         = '',
+    $draining         = '',
+    $algorithm        = 'Round Robin',
+    $persistence      = undef,
+    $bandwidth        = undef,
+    $failure_pool     = undef,
+    $maxconns         = undef,
+    $max_connect_time = undef,
+    $max_idle_connections_pernode = undef,
+    $node_so_nagle    = undef,
+    $keepalive_non_idempotent     = undef,
+    $transparent      = undef,
+    $ssl_encrypt      = undef,
+    $priority         = undef
 ) {
     include stingray
 

@@ -19,3 +19,19 @@ ssl_encrypt    <%= @ssl_encrypt %>
 <% if @passive_monitoring then -%>
 passive_monitoring      <%= @passive_monitoring %>
 <% end -%>
+<% if @transparent -%>
+transparent <%= @transparent %>
+<% end -%>
+<% if @max_connect_time -%>
+max_connect_time <%= @max_connect_time %>
+<% end -%>
+<% if @max_idle_connections_pernode -%>
+max_idle_connections_pernode <%= @max_idle_connections_pernode %>
+<% end -%>
+<% if @node_so_nagle -%>
+node_so_nagle <%= @node_so_nagle %>
+<%end -%>
+<% if @keepalive_non_idempotent -%>
+keepalive!non_idempotent <%= @keepalive_non_idempotent %>
+<% end -%>
+
